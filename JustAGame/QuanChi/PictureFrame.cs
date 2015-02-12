@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Drawing.Imaging;
+using System.Drawing;
 namespace QuanChi
 {
     public class PictureFrame
@@ -18,7 +19,31 @@ namespace QuanChi
             this.Hight = hight;
             this.Width = width;
         }
+        //Geting the picture
+        public void PictureDrow(string imagePath)
+        {
+            Image Picture = Image.FromFile(imagePath);                  //@"C:\Users\InfoKriegerX\Pictures\your_image.jpg");
+            Console.SetBufferSize((Picture.Width * 0x2), (Picture.Height * 0x2));
+            FrameDimension Dimension = new FrameDimension(Picture.FrameDimensionsList[0x0]);
+            int FrameCount = Picture.GetFrameCount(Dimension);
+            int Left = Console.WindowLeft, Top = Console.WindowTop;
+            char[] Chars = { '#', '#', '@', '%', '=', '+', '*', ':', '-', '.', ' ' };
+            Picture.SelectActiveFrame(Dimension, 0x0);
+            for (int i = 0x0; i < Picture.Height; i++)
+            {
+                for (int x = 0x0; x < Picture.Width; x++)
+                {
+                    Color Color = ((Bitmap)Picture).GetPixel(x, i);
+                    int Gray = (Color.R + Color.G + Color.B) / 0x3;
+                    int Index = (Gray * (Chars.Length - 0x1)) / 0xFF;
+                    Console.Write(Chars[Index]);
 
+                    Console.Write('\n');
+                }
+                Console.SetCursorPosition(Left, Top);
+                Console.Read();
+            }
+        }
         public void Draw(Position frameLeftTop, Position frameRightTop, Position frameRightBottom, Position frameLeftBottom)
         {
             for (int i = frameLeftTop.X; i < frameRightTop.Y; i++)
