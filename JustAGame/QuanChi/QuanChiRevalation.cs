@@ -7,6 +7,93 @@ namespace QuanChi
     {
         static void Main()
         {
+            for (int i = 0; i < 10; i++)
+            {
+                  Console.WriteLine();
+            }
+            Console.BufferHeight = Console.WindowHeight = 80;
+            Console.BufferWidth = Console.WindowWidth = 60;
+
+            Console.Write("\t --------QUAN Chi REVALATION ------");
+            for (int i = 0; i <10; i++)
+            {
+                Console.WriteLine();
+            }
+           
+            //Description of the game ruols
+
+            Console.Write("\tThe game hase the folwaing rouls.");
+            for (int i = 0; i < 5; i++)
+            {
+                Console.WriteLine();
+            }
+
+            Console.WriteLine("\t"+@"Displaing the hiden picture with a snake");
+            for (int i = 0; i < 10; i++)
+            {
+                Console.WriteLine();
+            }
+
+            Console.WriteLine("\tPlease chose one of the 5 picuures to drow");
+            for (int i = 0; i < 6; i++)
+            {
+                Console.WriteLine();
+            }
+            Console.WriteLine("\t\t{0,10}", "1: Picture 1 ");
+            Console.WriteLine();
+            Console.WriteLine("\t\t{0,10}", "2: Picture 2 ");
+            Console.WriteLine();
+            Console.WriteLine("\t\t{0,10}", "3: Picture 3 ");
+            Console.WriteLine();
+            Console.WriteLine("\t\t{0,10}", "4: Picture 4 ");
+            Console.WriteLine();
+            string choice = Console.ReadLine();
+            switch (choice)
+            {
+                case "1":
+
+                    Console.Clear();
+                    string pathPicture1 = @"";
+
+                    StartTheGame();
+                    break;
+                case "2":
+
+                    Console.Clear();
+                    string pathPicture2 = @"";
+
+                    StartTheGame();
+                    break;
+                case "3":
+
+                    Console.Clear();
+                    string pathPicture3 = @"";
+
+                    StartTheGame();
+                    break;
+                case "4":
+
+                    Console.Clear();
+                    string pathPicture4 = @"";
+
+                    StartTheGame();
+                    break;
+                case "5":
+
+                    Console.Clear();
+                    string pathPicture5 = @"";
+
+                    StartTheGame();
+                    break;
+            }
+
+
+
+        }
+
+        private static void StartTheGame()
+        {
+
             // Console.WindowHeight = 100;
             Console.BufferHeight = Console.WindowHeight = 120;
             Console.BufferWidth = Console.WindowWidth = 90;
@@ -24,7 +111,7 @@ namespace QuanChi
 
             while (true)
             {
-                snake.Draw();                
+                snake.Draw();
 
                 ConsoleKeyInfo keyInfo = Console.ReadKey(true);
                 if (keyInfo.Key == ConsoleKey.UpArrow)
@@ -54,7 +141,6 @@ namespace QuanChi
                     }
                 }
             }
-
         }
 
         private static void RecursivelyShowPictureSpace()
