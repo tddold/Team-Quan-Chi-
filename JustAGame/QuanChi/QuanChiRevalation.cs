@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Threading;
-
 namespace QuanChi
 {
     class QuanChi
@@ -11,41 +10,43 @@ namespace QuanChi
             {
                   Console.WriteLine();
             }
+            
             Console.BufferHeight = Console.WindowHeight = 80;
             Console.BufferWidth = Console.WindowWidth = 60;
-
-            Console.Write("\t --------QUAN Chi REVALATION ------");
+           
+          
+            Console.Write(String.Format("\t --------QUAN Chi REVALATION ------"));
             for (int i = 0; i <10; i++)
             {
-                Console.WriteLine();
+                Console.WriteLine();    
             }
            
             //Description of the game ruols
-
-            Console.Write("\tThe game hase the folwaing rouls.");
+        
+            Console.Write("\tTHE GAME HAS THE FALOWING ROULS");
             for (int i = 0; i < 5; i++)
             {
                 Console.WriteLine();
             }
 
-            Console.WriteLine("\t"+@"Displaing the hiden picture with a snake");
+            Console.WriteLine("\t"+@"DISPLAING PICTURE IN A FRAME USING SNAKE ");
             for (int i = 0; i < 10; i++)
             {
                 Console.WriteLine();
             }
 
-            Console.WriteLine("\tPlease chose one of the 5 picuures to drow");
+            Console.WriteLine("\tPLEASE CHOSE ONE OF THE 5 PICTURES BELOW");
             for (int i = 0; i < 6; i++)
             {
                 Console.WriteLine();
             }
-            Console.WriteLine("\t\t{0,10}", "1: Picture 1 ");
+            Console.WriteLine("\t\t{0,10}", "1: PICTURE ");
             Console.WriteLine();
-            Console.WriteLine("\t\t{0,10}", "2: Picture 2 ");
+            Console.WriteLine("\t\t{0,10}", "2: PICTURE  ");
             Console.WriteLine();
-            Console.WriteLine("\t\t{0,10}", "3: Picture 3 ");
+            Console.WriteLine("\t\t{0,10}", "3: PICTURE  ");
             Console.WriteLine();
-            Console.WriteLine("\t\t{0,10}", "4: Picture 4 ");
+            Console.WriteLine("\t\t{0,10}", "4: PICTURE ");
             Console.WriteLine();
             string choice = Console.ReadLine();
             switch (choice)
