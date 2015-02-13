@@ -20,13 +20,16 @@ namespace QuanChi
             
             Console.BufferHeight = Console.WindowHeight = 80;
             Console.BufferWidth = Console.WindowWidth = 60;
-           
+            Console.WriteLine(@"        
+                 ░░╦ ╦╔╗╦ ╔╗╔╗╔╦╗╔╗░░
+                 ░░║║║╠ ║ ║ ║║║║║╠ ░░
+                 ░░╚╩╝╚╝╚╝╚╝╚╝╩ ╩╚╝░░");
           
-            Console.Write(String.Format("\t --------QUAN Chi REVALATION ------"));
-            for (int i = 0; i <10; i++)
-            {
-                Console.WriteLine();    
-            }
+            Console.Write(String.Format("\t -------- QUAN Chi REVALATION ------"));
+                for (int i = 0; i <10; i++)
+                {
+                    Console.WriteLine();    
+                }
            
             //Description of the game rules
 
@@ -36,13 +39,13 @@ namespace QuanChi
                 Console.WriteLine();
             }
 
-            Console.WriteLine("\t"+@"DISPLAING PICTURE IN A FRAME USING SNAKE ");
+            Console.WriteLine("\t"+@"DISPLAYING PICTURE IN A FRAME USING SNAKE ");
             for (int i = 0; i < 10; i++)
             {
                 Console.WriteLine();
             }
 
-            Console.WriteLine("\tPLEASE CHOSE ONE OF THE 5 PICTURES BELOW");
+            Console.WriteLine("\tPLEASE CHOOSE ONE OF THE 5 PICTURES BELOW");
             for (int i = 0; i < 6; i++)
             {
                 Console.WriteLine();
@@ -54,6 +57,8 @@ namespace QuanChi
             Console.WriteLine("\t\t{0,10}", "3: PICTURE  ");
             Console.WriteLine();
             Console.WriteLine("\t\t{0,10}", "4: PICTURE ");
+            Console.WriteLine();
+            Console.WriteLine("\t\t{0,10}", "5: PICTURE ");
             Console.WriteLine();
             string choice = Console.ReadLine();
             switch (choice)
