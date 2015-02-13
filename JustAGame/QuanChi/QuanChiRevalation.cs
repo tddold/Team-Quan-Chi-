@@ -1,11 +1,18 @@
 ﻿using System;
 using System.Threading;
+using System.Media;
 namespace QuanChi
 {
     class QuanChi
     {
         static void Main()
         {
+            //MUUUUUUUSIC
+            System.Media.SoundPlayer sp = new System.Media.SoundPlayer(Properties.Resources.Azureflux___05___Wake_The_Fuck_Up);
+            sp.PlayLooping();
+
+
+
             for (int i = 0; i < 10; i++)
             {
                   Console.WriteLine();
@@ -21,9 +28,9 @@ namespace QuanChi
                 Console.WriteLine();    
             }
            
-            //Description of the game ruols
-        
-            Console.Write("\tTHE GAME HAS THE FALOWING ROULS");
+            //Description of the game rules
+
+            Console.Write("\tTHE GAME HAS THE FOLLOWING RULES");
             for (int i = 0; i < 5; i++)
             {
                 Console.WriteLine();
