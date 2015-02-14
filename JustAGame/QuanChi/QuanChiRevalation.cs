@@ -18,7 +18,7 @@ namespace QuanChi
                   Console.WriteLine();
             }
             
-    
+           
             Console.WriteLine(@"        
                  ░░╦ ╦╔╗╦ ╔╗╔╗╔╦╗╔╗░░
                  ░░║║║╠ ║ ║ ║║║║║╠ ░░
@@ -59,6 +59,8 @@ namespace QuanChi
             Console.WriteLine("\t\t\t\t\t\t{0,10}", "3: PICTURE  ");
             Console.WriteLine();
             Console.WriteLine("\t\t\t\t\t\t{0,10}", "4: PICTURE ");
+            Console.WriteLine();
+            Console.WriteLine("\t\t{0,10}", "5: PICTURE ");
             Console.WriteLine();
             Console.WriteLine("\t\t{0,10}", "5: PICTURE ");
             Console.WriteLine();
