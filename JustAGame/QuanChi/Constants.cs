@@ -16,5 +16,7 @@ namespace QuanChi
 
         public const char SnakeElement = '\u263B';
 
+        public static char[,] Matrix = new char[Constants.PictureFrameHeight + 1, Constants.PictureFrameWidth + 1];
+
     }
 }

@@ -20,7 +20,7 @@ namespace QuanChi
             this.Width = width;
         }
         //Geting the picture
-        public void PictureDrow(string imagePath)
+        public void PictureDraw(string imagePath)
         {
             Image Picture = Image.FromFile(imagePath);                  //@"C:\Users\InfoKriegerX\Pictures\your_image.jpg");
             Console.SetBufferSize((Picture.Width * 0x2), (Picture.Height * 0x2));
@@ -48,22 +48,27 @@ namespace QuanChi
         {
             for (int i = frameLeftTop.X; i < frameRightTop.Y; i++)
             {
+                Constants.Matrix[Console.CursorTop, Console.CursorLeft] = this.Wall;
+
                 Console.Write(this.Wall);
             }
 
             for (int i = frameLeftTop.X; i < frameLeftBottom.X; i++)
             {
+                Constants.Matrix[Console.CursorTop, Console.CursorLeft] = this.Wall;
                 Console.Write(this.Wall);
                 Console.WriteLine();
             }
             for (int i = frameLeftBottom.Y; i <= frameRightBottom.Y; i++)
             {
+                Constants.Matrix[Console.CursorTop, Console.CursorLeft] = this.Wall;
                 Console.Write(this.Wall);
             }
 
             for (int k = frameRightTop.X; k < frameRightBottom.X; k++)
             {
                 Console.SetCursorPosition(frameRightTop.Y, k);
+                Constants.Matrix[Console.CursorTop, Console.CursorLeft] = this.Wall;
                 Console.Write(this.Wall);
                 Console.WriteLine();
             }

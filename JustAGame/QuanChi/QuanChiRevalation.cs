@@ -3,166 +3,212 @@ using System.Threading;
 using System.Media;
 namespace QuanChi
 {
-    class QuanChi
-    {
-        static void Main()
-        {
-            ////MUUUUUUUSIC
-            System.Media.SoundPlayer sp = new System.Media.SoundPlayer(Properties.Resources.Azureflux___05___Wake_The_Fuck_Up);
-            sp.PlayLooping();
+	class QuanChi
+	{
+		static void Main()
+		{
+			////MUUUUUUUSIC
+			System.Media.SoundPlayer sp = new System.Media.SoundPlayer(Properties.Resources.Azureflux___05___Wake_The_Fuck_Up);
+			sp.PlayLooping();
 
 
 
-            for (int i = 0; i < 8; i++)
-            {
-                  Console.WriteLine();
-            }
-            
-           
-            Console.WriteLine(@"        
-                 ░░╦ ╦╔╗╦ ╔╗╔╗╔╦╗╔╗░░
-                 ░░║║║╠ ║ ║ ║║║║║╠ ░░
-                 ░░╚╩╝╚╝╚╝╚╝╚╝╩ ╩╚╝░░");
-            Console.BufferHeight = Console.WindowHeight = 40;
-            Console.BufferWidth = Console.WindowWidth = 120;
-           
-
-            Console.Write(String.Format("\t\t\t\t\t --------QUAN Chi REVALATION ------"));
-            for (int i = 0; i <3; i++)
-            {
-                Console.WriteLine();    
-            }
-           
-            //Description of the game rules
-
-            Console.Write("\t\t\t\t\tTHE GAME HAS THE FOLLOWING RULES");
-            for (int i = 0; i < 3; i++)
-            {
-                Console.WriteLine();
-            }
-
-            Console.WriteLine("\t\t\t\t\t" + @"DISPLAING PICTURE IN A FRAME USING SNAKE ");
-            for (int i = 0; i < 3; i++)
-            {
-                Console.WriteLine();
-            }
-
-            Console.WriteLine("\t\t\t\t\tPLEASE CHOSE ONE OF THE 5 PICTURES BELOW");
-            for (int i = 0; i < 3; i++)
-            {
-                Console.WriteLine();
-            }
-            Console.WriteLine("\t\t\t\t\t\t{0,10}", "1: PICTURE ");
-            Console.WriteLine();
-            Console.WriteLine("\t\t\t\t\t\t{0,10}", "2: PICTURE  ");
-            Console.WriteLine();
-            Console.WriteLine("\t\t\t\t\t\t{0,10}", "3: PICTURE  ");
-            Console.WriteLine();
-            Console.WriteLine("\t\t\t\t\t\t{0,10}", "4: PICTURE ");
-            Console.WriteLine();
-            Console.WriteLine("\t\t{0,10}", "5: PICTURE ");
-            Console.WriteLine();
-            Console.WriteLine("\t\t{0,10}", "5: PICTURE ");
-            Console.WriteLine();
-            string choice = Console.ReadLine();
-            switch (choice)
-            {
-                case "1":
-
-                    Console.Clear();
-                    string pathPicture1 = @"";
-
-                    StartTheGame();
-                    break;
-                case "2":
-
-                    Console.Clear();
-                    string pathPicture2 = @"";
-
-                    StartTheGame();
-                    break;
-                case "3":
-
-                    Console.Clear();
-                    string pathPicture3 = @"";
-
-                    StartTheGame();
-                    break;
-                case "4":
-
-                    Console.Clear();
-                    string pathPicture4 = @"";
-
-                    StartTheGame();
-                    break;
-                case "5":
-
-                    Console.Clear();
-                    string pathPicture5 = @"";
-
-                    StartTheGame();
-                    break;
-            }
+			for (int i = 0; i < 8; i++)
+			{
+				Console.WriteLine();
+			}
 
 
+			Console.WriteLine(@"        
+				 ░░╦ ╦╔╗╦ ╔╗╔╗╔╦╗╔╗░░
+				 ░░║║║╠ ║ ║ ║║║║║╠ ░░
+				 ░░╚╩╝╚╝╚╝╚╝╚╝╩ ╩╚╝░░");
+			Console.BufferHeight = Console.WindowHeight = 40;
+			Console.BufferWidth = Console.WindowWidth = 120;
 
-        }
 
-        private static void StartTheGame()
-        {
+			Console.Write(String.Format("\t\t\t\t\t --------QUAN Chi REVALATION ------"));
+			for (int i = 0; i < 3; i++)
+			{
+				Console.WriteLine();
+			}
 
-            // Console.WindowHeight = 100;
-            Console.BufferHeight = Console.WindowHeight = 40;
-            Console.BufferWidth = Console.WindowWidth = 100;
+			//Description of the game rules
 
-            PictureFrame pictureFrame = new PictureFrame(Constants.Wall, Constants.PictureFrameWidth, Constants.PictureFrameHeight);
+			Console.Write("\t\t\t\t\tTHE GAME HAS THE FOLLOWING RULES");
+			for (int i = 0; i < 3; i++)
+			{
+				Console.WriteLine();
+			}
 
-            Position frameLeftTop = new Position(0, 0);
-            Position frameRightTop = new Position(0, pictureFrame.Width);
-            Position frameRightBottom = new Position(pictureFrame.Hight, pictureFrame.Width);
-            Position frameLeftBottom = new Position(pictureFrame.Hight, 0);
+			Console.WriteLine("\t\t\t\t\t" + @"DISPLAING PICTURE IN A FRAME USING SNAKE ");
+			for (int i = 0; i < 3; i++)
+			{
+				Console.WriteLine();
+			}
 
-            pictureFrame.Draw(frameLeftTop, frameRightTop, frameRightBottom, frameLeftBottom);
+			Console.WriteLine("\t\t\t\t\tPLEASE CHOSE ONE OF THE 5 PICTURES BELOW");
+			for (int i = 0; i < 3; i++)
+			{
+				Console.WriteLine();
+			}
+			Console.WriteLine("\t\t\t\t\t\t{0,10}", "1: PICTURE ");
+			Console.WriteLine();
+			Console.WriteLine("\t\t\t\t\t\t{0,10}", "2: PICTURE  ");
+			Console.WriteLine();
+			Console.WriteLine("\t\t\t\t\t\t{0,10}", "3: PICTURE  ");
+			Console.WriteLine();
+			Console.WriteLine("\t\t\t\t\t\t{0,10}", "4: PICTURE ");
+			Console.WriteLine();
+			Console.WriteLine("\t\t{0,10}", "5: PICTURE ");
+			Console.WriteLine();
+			Console.WriteLine("\t\t{0,10}", "5: PICTURE ");
+			Console.WriteLine();
+			string choice = Console.ReadLine();
 
-            Snake snake = new Snake(Constants.SnakeElement, new Position(40, 20));
+			switch (choice)
+			{
+				case "1":
 
-            while (true)
-            {
-                snake.Draw();
+					Console.Clear();
+					string pathPicture1 = @"";
 
-                ConsoleKeyInfo keyInfo = Console.ReadKey(true);
-                if (keyInfo.Key == ConsoleKey.UpArrow)
-                {
-                    snake.MoveSnakeUp();
-                }
-                else if (keyInfo.Key == ConsoleKey.DownArrow)
-                {
-                    snake.MoveSnakeDown();
-                }
-                else if (keyInfo.Key == ConsoleKey.RightArrow)
-                {
-                    snake.MoveSnakeRight();
-                }
-                else if (keyInfo.Key == ConsoleKey.LeftArrow)
-                {
-                    snake.MoveSnakeLeft();
-                }
+					StartTheGame();
+					break;
+				case "2":
 
-                //TODO: check if snake is in wall
-                if (false)
-                {
-                    //TODO: check if picture should be shown (Using DFS or BFS)
-                    if (false)
-                    {
-                        RecursivelyShowPictureSpace();
-                    }
-                }
-            }
-        }
+					Console.Clear();
+					string pathPicture2 = @"";
 
-        private static void RecursivelyShowPictureSpace()
-        {
-            throw new NotImplementedException();
-        }
-    }
+					StartTheGame();
+					break;
+				case "3":
+
+					Console.Clear();
+					string pathPicture3 = @"";
+
+					StartTheGame();
+					break;
+				case "4":
+
+					Console.Clear();
+					string pathPicture4 = @"";
+
+					StartTheGame();
+					break;
+				case "5":
+
+					Console.Clear();
+					string pathPicture5 = @"";
+
+					StartTheGame();
+					break;
+			}
+
+
+
+		}
+
+		private static void StartTheGame()
+		{
+
+			// Console.WindowHeight = 100;
+			Console.BufferHeight = Console.WindowHeight = 40;
+			Console.BufferWidth = Console.WindowWidth = 100;
+
+			PictureFrame pictureFrame = new PictureFrame(Constants.Wall, Constants.PictureFrameWidth, Constants.PictureFrameHeight);
+
+			Position frameLeftTop = new Position(0, 0);
+			Position frameRightTop = new Position(0, pictureFrame.Width);
+			Position frameRightBottom = new Position(pictureFrame.Hight, pictureFrame.Width);
+			Position frameLeftBottom = new Position(pictureFrame.Hight, 0);
+
+			pictureFrame.Draw(frameLeftTop, frameRightTop, frameRightBottom, frameLeftBottom);
+
+			Snake snake = new Snake(Constants.SnakeElement, new Position(0, 10));
+			string direction = String.Empty;
+			bool onFrame = true;
+
+			while (true)
+			{
+				onFrame = CheckIfOnField(snake);
+				if (onFrame)
+				{
+					snake.DrawOnFrame();
+				}
+				else
+				{
+					snake.DrawOnField();
+				}
+
+				// move without press the boton
+				if (direction == "up")
+				{
+					snake.MoveSnakeUp();
+				}
+				else if (direction == "down")
+				{
+					snake.MoveSnakeDown();
+				}
+				else if (direction == "left")
+				{
+					snake.MoveSnakeLeft();
+				}
+				else if (direction == "right")
+				{
+					snake.MoveSnakeRight();
+				}
+
+
+				if (Console.KeyAvailable)
+				{
+					ConsoleKeyInfo keyInfo = Console.ReadKey(true);
+					if (keyInfo.Key == ConsoleKey.UpArrow)
+					{
+						direction = "up";
+					}
+					else if (keyInfo.Key == ConsoleKey.DownArrow)
+					{
+						direction = "down";
+					}
+					else if (keyInfo.Key == ConsoleKey.RightArrow)
+					{
+						direction = "right";
+					}
+					else if (keyInfo.Key == ConsoleKey.LeftArrow)
+					{
+						direction = "left";
+					}
+				}
+
+				//TODO: check if snake is in wall
+				if (false)
+				{
+					//TODO: check if picture should be shown (Using DFS or BFS)
+					if (false)
+					{
+						RecursivelyShowPictureSpace();
+					}
+				}
+
+				Thread.Sleep(70);
+			}
+		}
+
+		private static bool CheckIfOnField(Snake snake)
+		{
+			bool onFrame = false;
+			if (snake.Head.X == 0 || snake.Head.Y == 0 || snake.Head.X == Constants.PictureFrameWidth || snake.Head.Y == Constants.PictureFrameHeight)
+			{
+				onFrame = true;
+			}
+
+			return onFrame;
+		}
+
+		private static void RecursivelyShowPictureSpace()
+		{
+			throw new NotImplementedException();
+		}
+	}
 }
