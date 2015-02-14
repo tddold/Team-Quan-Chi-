@@ -10,9 +10,9 @@ namespace QuanChi
     {
         public const char Wall = '*';
 
-        public const int PictureFrameHeight = 100;
+        public const int PictureFrameHeight = 37;
 
-        public const int PictureFrameWidth = 80;
+        public const int PictureFrameWidth = 90;
 
         public const char SnakeElement = '\u263B';
 

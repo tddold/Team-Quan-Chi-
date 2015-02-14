@@ -7,53 +7,53 @@ namespace QuanChi
     {
         static void Main()
         {
-            //MUUUUUUUSIC
+            ////MUUUUUUUSIC
             System.Media.SoundPlayer sp = new System.Media.SoundPlayer(Properties.Resources.Azureflux___05___Wake_The_Fuck_Up);
             sp.PlayLooping();
 
 
 
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < 8; i++)
             {
                   Console.WriteLine();
             }
             
-            Console.BufferHeight = Console.WindowHeight = 80;
-            Console.BufferWidth = Console.WindowWidth = 60;
-           
-          
-            Console.Write(String.Format("\t --------QUAN Chi REVALATION ------"));
-            for (int i = 0; i <10; i++)
+            Console.BufferHeight = Console.WindowHeight = 40;
+            Console.BufferWidth = Console.WindowWidth = 120;
+
+
+            Console.Write(String.Format("\t\t\t\t\t --------QUAN Chi REVALATION ------"));
+            for (int i = 0; i <3; i++)
             {
                 Console.WriteLine();    
             }
            
             //Description of the game rules
 
-            Console.Write("\tTHE GAME HAS THE FOLLOWING RULES");
-            for (int i = 0; i < 5; i++)
+            Console.Write("\t\t\t\t\tTHE GAME HAS THE FOLLOWING RULES");
+            for (int i = 0; i < 3; i++)
             {
                 Console.WriteLine();
             }
 
-            Console.WriteLine("\t"+@"DISPLAING PICTURE IN A FRAME USING SNAKE ");
-            for (int i = 0; i < 10; i++)
+            Console.WriteLine("\t\t\t\t\t" + @"DISPLAING PICTURE IN A FRAME USING SNAKE ");
+            for (int i = 0; i < 3; i++)
             {
                 Console.WriteLine();
             }
 
-            Console.WriteLine("\tPLEASE CHOSE ONE OF THE 5 PICTURES BELOW");
-            for (int i = 0; i < 6; i++)
+            Console.WriteLine("\t\t\t\t\tPLEASE CHOSE ONE OF THE 5 PICTURES BELOW");
+            for (int i = 0; i < 3; i++)
             {
                 Console.WriteLine();
             }
-            Console.WriteLine("\t\t{0,10}", "1: PICTURE ");
+            Console.WriteLine("\t\t\t\t\t\t{0,10}", "1: PICTURE ");
             Console.WriteLine();
-            Console.WriteLine("\t\t{0,10}", "2: PICTURE  ");
+            Console.WriteLine("\t\t\t\t\t\t{0,10}", "2: PICTURE  ");
             Console.WriteLine();
-            Console.WriteLine("\t\t{0,10}", "3: PICTURE  ");
+            Console.WriteLine("\t\t\t\t\t\t{0,10}", "3: PICTURE  ");
             Console.WriteLine();
-            Console.WriteLine("\t\t{0,10}", "4: PICTURE ");
+            Console.WriteLine("\t\t\t\t\t\t{0,10}", "4: PICTURE ");
             Console.WriteLine();
             string choice = Console.ReadLine();
             switch (choice)
@@ -103,8 +103,8 @@ namespace QuanChi
         {
 
             // Console.WindowHeight = 100;
-            Console.BufferHeight = Console.WindowHeight = 120;
-            Console.BufferWidth = Console.WindowWidth = 90;
+            Console.BufferHeight = Console.WindowHeight = 40;
+            Console.BufferWidth = Console.WindowWidth = 100;
 
             PictureFrame pictureFrame = new PictureFrame(Constants.Wall, Constants.PictureFrameWidth, Constants.PictureFrameHeight);
 
