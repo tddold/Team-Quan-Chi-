@@ -1,4 +1,4 @@
--<h1 align="center">Тeam-Quan-Chi<p align="rihht"></h1>
+<h1 align="center">Тeam-Quan-Chi<p align="rihht"></h1>
 ---
 <h1 align="center">C#2 Teamwork - Team "Quan Chi"i</h1>
 ---
