@@ -27,7 +27,7 @@ namespace QuanChi
 				 ░░║║║╠ ║ ║ ║║║║║╠ ░░
 				 ░░╚╩╝╚╝╚╝╚╝╚╝╩ ╩╚╝░░");
 			Console.BufferHeight = Console.WindowHeight = 40;
-			Console.BufferWidth = Console.WindowWidth = 120;
+			Console.BufferWidth = Console.WindowWidth = 100;
 
 
 			Console.Write(String.Format("\t\t\t\t\t --------QUAN Chi REVALATION ------"));
@@ -61,11 +61,7 @@ namespace QuanChi
 			Console.WriteLine();
 			Console.WriteLine("\t\t\t\t\t\t{0,10}", "3: PICTURE  ");
 			Console.WriteLine();
-			Console.WriteLine("\t\t\t\t\t\t{0,10}", "4: PICTURE ");
-			Console.WriteLine();
-			Console.WriteLine("\t\t{0,10}", "5: PICTURE ");
-			Console.WriteLine();
-			Console.WriteLine("\t\t{0,10}", "5: PICTURE ");
+            Console.WriteLine("\t\t\t\t\t\t{0,10}", "4: PICTURE ");
 			Console.WriteLine();
 			string choice = Console.ReadLine();
 
