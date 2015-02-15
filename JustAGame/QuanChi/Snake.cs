@@ -40,11 +40,16 @@ namespace QuanChi
             set;
         }
 
+        public void ResetBody()
+        {
+            this.Body = new List<Position>();
+        }
+
         public void DrawOnField()
         {
-            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.ForegroundColor = ConsoleColor.Green;
             Console.SetCursorPosition(this.Head.X, this.Head.Y);
-            Constants.Matrix[Console.CursorTop, Console.CursorLeft] = this.SnakeElement;
+            Constants.Matrix[Console.CursorTop, Console.CursorLeft] = '@';
             Console.Write(this.SnakeElement);
 
             if (this.LastHead != null)
@@ -60,18 +65,20 @@ namespace QuanChi
 
         public void DrawOnFrame()
         {
-            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.BackgroundColor = ConsoleColor.Yellow;
             Console.SetCursorPosition(this.Head.X, this.Head.Y);
-            Constants.Matrix[Console.CursorTop, Console.CursorLeft] = this.SnakeElement;
+            // Constants.Matrix[Console.CursorTop, Console.CursorLeft] = this.SnakeElement;
             Console.Write(this.SnakeElement);
 
             if (this.LastHead != null)
             {
                 Console.SetCursorPosition(this.LastHead.X, this.LastHead.Y);
-                Constants.Matrix[Console.CursorTop, Console.CursorLeft] = Constants.Wall;
+                Constants.Matrix[Console.CursorTop, Console.CursorLeft] = '@';
                 Console.Write(Constants.Wall);
             }
 
+            Console.BackgroundColor = ConsoleColor.Black;
 
         }
 

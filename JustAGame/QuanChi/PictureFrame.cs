@@ -46,6 +46,7 @@ namespace QuanChi
         }
         public void Draw(Position frameLeftTop, Position frameRightTop, Position frameRightBottom, Position frameLeftBottom)
         {
+            Console.BackgroundColor = ConsoleColor.Yellow;
             for (int i = frameLeftTop.X; i < frameRightTop.Y; i++)
             {
                 Constants.Matrix[Console.CursorTop, Console.CursorLeft] = this.Wall;
@@ -72,6 +73,8 @@ namespace QuanChi
                 Console.Write(this.Wall);
                 Console.WriteLine();
             }
+
+            Console.BackgroundColor = ConsoleColor.Black;
         }
 
     }
