@@ -1,6 +1,6 @@
+<a align="right" href="https://github.com/tddold/Team-Quan-Chi-/tree/master/JustAGame/QuanChi"><img src="https://github.com/tddold/Team-Quan-Chi-/blob/master/QuanChi.png" /></a></p>
 
-
--<h1 align="center">Тeam-Quan-Chi<p align="rihht"><a href="https://github.com/tddold/Team-Quan-Chi-/tree/master/JustAGame/QuanChi"><img src="https://github.com/tddold/Team-Quan-Chi-/blob/master/QuanChi.png" /></a></p></h1>
+-<h1 align="center">Тeam-Quan-Chi<p align="rihht"></h1>
 ---
 -<h1 align="center">C#2 Teamwork - Team "Quan Chi"i</h1>
 ---
