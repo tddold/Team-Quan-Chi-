@@ -44,13 +44,13 @@ namespace QuanChi
 				Console.WriteLine();
 			}
 
-			Console.WriteLine("\t\t\t\t\t" + @"DISPLAING PICTURE IN A FRAME USING SNAKE ");
+			Console.WriteLine("\t\t\t\t\t" + @"DISPLAYING PICTURE IN A FRAME USING SNAKE ");
 			for (int i = 0; i < 3; i++)
 			{
 				Console.WriteLine();
 			}
 
-			Console.WriteLine("\t\t\t\t\tPLEASE CHOSE ONE OF THE 5 PICTURES BELOW");
+			Console.WriteLine("\t\t\t\t\tPLEASE CHOOSE ONE OF THE 5 PICTURES BELOW");
 			for (int i = 0; i < 3; i++)
 			{
 				Console.WriteLine();
@@ -337,7 +337,9 @@ namespace QuanChi
 				if (snake.Body.Any(b => b.X == badBoyPos.X + 1 && b.Y == badBoyPos.Y - 1))
 				{
 					// Game over!!!
-					throw new ArgumentException();
+                    Console.WriteLine("GAME OVER");
+                    System.Environment.Exit(0);
+
 				}
 
 				// check is the Bad Boy is in the body and change direction
@@ -367,7 +369,8 @@ namespace QuanChi
 				if (snake.Body.Any(b => b.X == badBoyPos.X - 1 && b.Y == badBoyPos.Y - 1))
 				{
 					// Game over!!!
-					throw new ArgumentException();
+                    Console.WriteLine("GAME OVER");
+                    System.Environment.Exit(0);
 				}
 
 				// check is the Bad Boy is in the body and change direction
@@ -397,7 +400,8 @@ namespace QuanChi
 				if (snake.Body.Any(b => b.X == badBoyPos.X - 1 && b.Y == badBoyPos.Y + 1))
 				{
 					// Game over!!!
-					throw new ArgumentException();
+                    Console.WriteLine("GAME OVER");
+                    System.Environment.Exit(0);
 				}
 
 				// check is the Bad Boy is in the body and change direction
@@ -427,7 +431,8 @@ namespace QuanChi
 				if (snake.Body.Any(b => b.X == badBoyPos.X + 1 && b.Y == badBoyPos.Y + 1))
 				{
 					// Game over!!!
-					throw new ArgumentException();
+                    Console.WriteLine("GAME OVER");
+                    System.Environment.Exit(0);
 				}
 
 				// check is the Bad Boy is in the body and change direction
