@@ -378,10 +378,15 @@ namespace QuanChi
                 if (snake.Body.Any(b => b.X == badBoyPos.X + 1 && b.Y == badBoyPos.Y - 1))
                 {
                     // Game over!!!
-                    Console.SetCursorPosition(0, pictureFrame.Hight - 1);
-                    Console.WriteLine("GAME OVER");
-                    System.Environment.Exit(0);
-
+                    lives--;
+                    Results();
+                    if (lives == 0)
+                    {
+                        Console.SetCursorPosition(0, pictureFrame.Hight - 1);
+                        Console.WriteLine("GAME OVER");
+                        System.Environment.Exit(0);
+                    }
+                    
                 }
 
                 // check is the Bad Boy is in the body and change direction
@@ -411,9 +416,14 @@ namespace QuanChi
                 if (snake.Body.Any(b => b.X == badBoyPos.X - 1 && b.Y == badBoyPos.Y - 1))
                 {
                     // Game over!!!
-                    Console.SetCursorPosition(0, pictureFrame.Hight - 1);
-                    Console.WriteLine("GAME OVER");
-                    System.Environment.Exit(0);
+                    lives--;
+                    Results();
+                    if (lives == 0)
+                    {
+                        Console.SetCursorPosition(0, pictureFrame.Hight - 1);
+                        Console.WriteLine("GAME OVER");
+                        System.Environment.Exit(0);  
+                    }
                 }
 
                 // check is the Bad Boy is in the body and change direction
@@ -443,9 +453,14 @@ namespace QuanChi
                 if (snake.Body.Any(b => b.X == badBoyPos.X - 1 && b.Y == badBoyPos.Y + 1))
                 {
                     // Game over!!!
-                    Console.SetCursorPosition(0, pictureFrame.Hight - 1);
-                    Console.WriteLine("GAME OVER");
-                    System.Environment.Exit(0);
+                    lives--;
+                    Results();
+                    if (lives == 0)
+                    {
+                        Console.SetCursorPosition(0, pictureFrame.Hight - 1);
+                        Console.WriteLine("GAME OVER");
+                        System.Environment.Exit(0);
+                    }
                 }
 
                 // check is the Bad Boy is in the body and change direction
@@ -475,9 +490,14 @@ namespace QuanChi
                 if (snake.Body.Any(b => b.X == badBoyPos.X + 1 && b.Y == badBoyPos.Y + 1))
                 {
                     // Game over!!!
-                    Console.SetCursorPosition(0, pictureFrame.Hight - 1);
-                    Console.WriteLine("GAME OVER");
-                    System.Environment.Exit(0);
+                    lives--;
+                    Results();
+                    if (lives == 0)
+                    {
+                        Console.SetCursorPosition(0, pictureFrame.Hight - 1);
+                        Console.WriteLine("GAME OVER");
+                        System.Environment.Exit(0);
+                    }
                 }
 
                 // check is the Bad Boy is in the body and change direction
