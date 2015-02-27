@@ -3,6 +3,7 @@ using System.Threading;
 using System.Media;
 using System.Collections.Generic;
 using System.Linq;
+using System.IO;
 
 namespace QuanChi
 {
@@ -279,9 +280,13 @@ namespace QuanChi
             }
             else
             {
+                using (StreamWriter record = new StreamWriter("../../results.txt"))
+                {
+                    record.WriteLine("Score: {0} Date: {1}",score,DateTime.Now);
+                }
                 Console.Clear();
                 Console.SetCursorPosition(0, pictureFrame.Hight - 1);
-                Console.WriteLine("You win!");
+                Console.WriteLine("You win! score: {0}", score);
                 Environment.Exit(0);
             }
         }
@@ -382,8 +387,12 @@ namespace QuanChi
                     Results();
                     if (lives == 0)
                     {
+                        using (StreamWriter record = new StreamWriter("../../results.txt"))
+                        {
+                            record.WriteLine("Score: {0} Date: {1}", score, DateTime.Now);
+                        }
                         Console.SetCursorPosition(0, pictureFrame.Hight - 1);
-                        Console.WriteLine("GAME OVER");
+                        Console.WriteLine("GAME OVER! Score: {0}",score);
                         System.Environment.Exit(0);
                     }
                     
@@ -420,8 +429,12 @@ namespace QuanChi
                     Results();
                     if (lives == 0)
                     {
+                        using (StreamWriter record = new StreamWriter("../../results.txt"))
+                        {
+                            record.WriteLine("Score: {0} Date: {1}", score, DateTime.Now);
+                        }
                         Console.SetCursorPosition(0, pictureFrame.Hight - 1);
-                        Console.WriteLine("GAME OVER");
+                        Console.WriteLine("GAME OVER! Score: {0}",score);
                         System.Environment.Exit(0);  
                     }
                 }
@@ -457,8 +470,12 @@ namespace QuanChi
                     Results();
                     if (lives == 0)
                     {
+                        using (StreamWriter record = new StreamWriter("../../results.txt"))
+                        {
+                            record.WriteLine("Score: {0} Date: {1}", score, DateTime.Now);
+                        }
                         Console.SetCursorPosition(0, pictureFrame.Hight - 1);
-                        Console.WriteLine("GAME OVER");
+                        Console.WriteLine("GAME OVER! Score: {0}",score);
                         System.Environment.Exit(0);
                     }
                 }
@@ -494,8 +511,12 @@ namespace QuanChi
                     Results();
                     if (lives == 0)
                     {
+                        using (StreamWriter record = new StreamWriter("../../results.txt"))
+                        {
+                            record.WriteLine("Score: {0} Date: {1}", score, DateTime.Now);
+                        }
                         Console.SetCursorPosition(0, pictureFrame.Hight - 1);
-                        Console.WriteLine("GAME OVER");
+                        Console.WriteLine("GAME OVER! Score: {0}", score);
                         System.Environment.Exit(0);
                     }
                 }
