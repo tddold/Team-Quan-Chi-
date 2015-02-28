@@ -15,8 +15,16 @@ namespace QuanChi
         static int score = 0;
         static int percentage = 0;
 
+        private string path = string.Empty;
+
+        public string Path
+        {
+            get { return path; }
+            set { path = value; }
+        }
         static void Main()
         {
+            QuanChi pathInstance = new QuanChi();
             ////MUUUUUUUSIC
             System.Media.SoundPlayer sp = new System.Media.SoundPlayer(Properties.Resources.Azureflux___05___Wake_The_Fuck_Up);
             sp.PlayLooping();
@@ -77,35 +85,35 @@ namespace QuanChi
                 case "1":
 
                     Console.Clear();
-                    string pathPicture1 = @"";
-
+                    pathInstance.Path = @"..\..\acrobat.jpg";
+                    ClassSingleton.get_instance().PathPicture = pathInstance.Path;
                     StartTheGame();
                     break;
                 case "2":
 
                     Console.Clear();
-                    string pathPicture2 = @"";
+                    pathInstance.Path = @"";
 
                     StartTheGame();
                     break;
                 case "3":
 
                     Console.Clear();
-                    string pathPicture3 = @"";
+                    pathInstance.Path = @"";
 
                     StartTheGame();
                     break;
                 case "4":
 
                     Console.Clear();
-                    string pathPicture4 = @"";
+                    pathInstance.Path = @"";
 
                     StartTheGame();
                     break;
                 case "5":
 
                     Console.Clear();
-                    string pathPicture5 = @"";
+                    pathInstance.Path = @"";
 
                     StartTheGame();
                     break;
@@ -280,13 +288,25 @@ namespace QuanChi
             }
             else
             {
+
                 using (StreamWriter record = new StreamWriter("../../results.txt"))
                 {
                     record.WriteLine("Score: {0} Date: {1}",score,DateTime.Now);
                 }
                 Console.Clear();
                 Console.SetCursorPosition(0, pictureFrame.Hight - 1);
+                try
+                {
+                    string path = ClassSingleton.get_instance().PathPicture;
+                    pictureFrame.PictureDraw(path);
+                }
+                catch (FileNotFoundException)
+                {
+
+                    throw;
+                }
                 Console.WriteLine("You win! score: {0}", score);
+              
                 Environment.Exit(0);
             }
         }
@@ -387,6 +407,8 @@ namespace QuanChi
                     Results();
                     if (lives == 0)
                     {
+                       
+                     
                         using (StreamWriter record = new StreamWriter("../../results.txt"))
                         {
                             record.WriteLine("Score: {0} Date: {1}", score, DateTime.Now);
@@ -429,6 +451,17 @@ namespace QuanChi
                     Results();
                     if (lives == 0)
                     {
+                        try
+                        {
+                            string path = ClassSingleton.get_instance().PathPicture;
+                            pictureFrame.PictureDraw(path);
+                        }
+                        catch (FileNotFoundException)
+                        {
+
+                            throw;
+                        }
+                     
                         using (StreamWriter record = new StreamWriter("../../results.txt"))
                         {
                             record.WriteLine("Score: {0} Date: {1}", score, DateTime.Now);
@@ -470,6 +503,17 @@ namespace QuanChi
                     Results();
                     if (lives == 0)
                     {
+                        try
+                        {
+                            string path = ClassSingleton.get_instance().PathPicture;
+                            pictureFrame.PictureDraw(path);
+                        }
+                        catch (FileNotFoundException)
+                        {
+
+                            throw;
+                        }
+                     
                         using (StreamWriter record = new StreamWriter("../../results.txt"))
                         {
                             record.WriteLine("Score: {0} Date: {1}", score, DateTime.Now);
@@ -511,6 +555,17 @@ namespace QuanChi
                     Results();
                     if (lives == 0)
                     {
+                        try
+                        {
+                             string path = ClassSingleton.get_instance().PathPicture;
+                             pictureFrame.PictureDraw(path);
+                        }
+                        catch (FileNotFoundException)
+                        {
+                            
+                            throw;
+                        }
+                     
                         using (StreamWriter record = new StreamWriter("../../results.txt"))
                         {
                             record.WriteLine("Score: {0} Date: {1}", score, DateTime.Now);

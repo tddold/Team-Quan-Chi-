@@ -18,6 +18,7 @@ namespace QuanChi
 
         public const char BadBoyElement = '\u263A';
 
+       
         public static char[,] Matrix = new char[Constants.PictureFrameHeight + 1, Constants.PictureFrameWidth + 1];
 
     }

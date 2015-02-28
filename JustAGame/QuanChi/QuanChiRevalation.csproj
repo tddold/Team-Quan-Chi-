@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BadBoys.cs" />
+    <Compile Include="ClassSingleton.cs" />
     <Compile Include="Constants.cs" />
     <Compile Include="PictureFrame.cs" />
     <Compile Include="Position.cs" />
@@ -66,6 +67,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Azureflux - 05 - Wake The Fuck Up.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="acrobat.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

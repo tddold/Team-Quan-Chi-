@@ -22,7 +22,7 @@ namespace QuanChi
         //Geting the picture
         public void PictureDraw(string imagePath)
         {
-            Image Picture = Image.FromFile(imagePath);                  //@"C:\Users\InfoKriegerX\Pictures\your_image.jpg");
+            Image Picture = Image.FromFile(imagePath);
             Console.SetBufferSize((Picture.Width * 0x2), (Picture.Height * 0x2));
             FrameDimension Dimension = new FrameDimension(Picture.FrameDimensionsList[0x0]);
             int FrameCount = Picture.GetFrameCount(Dimension);
@@ -37,12 +37,11 @@ namespace QuanChi
                     int Gray = (Color.R + Color.G + Color.B) / 0x3;
                     int Index = (Gray * (Chars.Length - 0x1)) / 0xFF;
                     Console.Write(Chars[Index]);
-
-                    Console.Write('\n');
                 }
-                Console.SetCursorPosition(Left, Top);
-                Console.Read();
+                Console.Write('\n');
             }
+            Console.SetCursorPosition(Left, Top);
+            Console.Read();
         }
         public void Draw(Position frameLeftTop, Position frameRightTop, Position frameRightBottom, Position frameLeftBottom)
         {
