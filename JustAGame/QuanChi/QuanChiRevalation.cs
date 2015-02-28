@@ -85,7 +85,7 @@ namespace QuanChi
                 case "1":
 
                     Console.Clear();
-                    pathInstance.Path = @"..\..\acrobat.jpg";
+                    pathInstance.Path = @"..\..\acrobat.bmp";
                     ClassSingleton.get_instance().PathPicture = pathInstance.Path;
                     StartTheGame();
                     break;
