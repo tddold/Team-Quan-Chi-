@@ -8,6 +8,7 @@ namespace QuanChi
 {
     public class Position
     {
+        // positions
         public Position(int x, int y)
         {
             X = x;

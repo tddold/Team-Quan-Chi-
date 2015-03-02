@@ -36,7 +36,7 @@ namespace QuanChi
                 Console.WriteLine();
             }
 
-
+            // logo
             Console.WriteLine(@"        
 				 ░░╦ ╦╔╗╦ ╔╗╔╗╔╦╗╔╗░░
 				 ░░║║║╠ ║ ║ ║║║║║╠ ░░
@@ -125,7 +125,7 @@ namespace QuanChi
 
         private static void StartTheGame()
         {
-
+            // set correct size
             // Console.WindowHeight = 100;
             Console.BufferHeight = Console.WindowHeight = 40;
             Console.BufferWidth = Console.WindowWidth = 100;
