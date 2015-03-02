@@ -22,7 +22,8 @@ namespace QuanChi
         //Geting the picture
         public void PictureDraw(string imagePath)
         {
-            
+            try
+            {
                 Image Picture = Image.FromFile(imagePath);
                 Console.SetBufferSize((Picture.Width * 0x2), (Picture.Height * 0x2));
                 FrameDimension Dimension = new FrameDimension(Picture.FrameDimensionsList[0x0]);
@@ -43,6 +44,12 @@ namespace QuanChi
                 }
                 Console.SetCursorPosition(Left, Top);
                 Console.Read();
+            }
+            catch (ArgumentException)
+            {
+                Console.WriteLine("Game Over");
+            }
+                
             
         }
         public void Draw(Position frameLeftTop, Position frameRightTop, Position frameRightBottom, Position frameLeftBottom)

@@ -45,6 +45,7 @@
     <Compile Include="BadBoys.cs" />
     <Compile Include="ClassSingleton.cs" />
     <Compile Include="Constants.cs" />
+    <Compile Include="exce.cs" />
     <Compile Include="PictureFrame.cs" />
     <Compile Include="Position.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
