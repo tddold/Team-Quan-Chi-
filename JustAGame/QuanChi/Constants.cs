@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+// Constants
+
 namespace QuanChi
 {
     public static class Constants
