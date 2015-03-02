@@ -7,4 +7,4 @@
 ####2. [MindMap](https://github.com/tddold/Team-Quan-Chi-/blob/master/Team%20Quan%20Chi.pdf)
 ####3. [Идеен проект](https://github.com/tddold/Team-Quan-Chi-/blob/master/Proect.doc)
 ####4. [GAME](https://github.com/tddold/Team-Quan-Chi-/tree/master/JustAGame/QuanChi)
-####5. [Документация](https://docs.google.com/document/d/15utaSh6ylhwkFKYTKa-yqDu7dD8-BQByJY-DdYN6cgI/edit)
+####5. [Документация](https://docs.google.com/presentation/d/1oiJ4DCzyBxO-mvwx75IvPmAFE0-ZfC7VsLLMLO8HXJ8/edit#slide=id.p)
