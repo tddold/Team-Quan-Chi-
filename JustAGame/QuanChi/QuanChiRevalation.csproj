@@ -66,6 +66,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Documentation\Quan Chi team work.pptx" />
     <None Include="Resources\Azureflux - 05 - Wake The Fuck Up.wav" />
   </ItemGroup>
   <ItemGroup>
